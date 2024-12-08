@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MT管理器的问题 - 应用详情</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+        }
+
+        .back-button {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .app-info {
+            padding: 20px;
+            background: #fff;
+            display: flex;
+            gap: 15px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+        }
+
+        .app-details {
+            flex: 1;
+        }
+
+        .app-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .developer {
+            color: #1a73e8;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .version {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: #fff;
+            margin-top: 1px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .version-btn, .download-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .version-btn {
+            background: #fff;
+            color: #333;
+        }
+
+        .download-btn {
+            background: #1a73e8;
+            color: #fff;
+            border: none;
+        }
+
+        .section {
+            margin-top: 10px;
+            background: #fff;
+            padding: 15px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .screenshots {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .screenshot {
+            width: 200px;
+            height: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .about {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            padding: 5px 15px;
+            border-radius: 15px;
+            background: #f5f5f5;
+            font-size: 14px;
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+        font-family: Arial, sans-serif;
+  }
+  .comment-section {
+    margin: 20px;
+  }
+  .comment-list {
+    list-style: none;
+    padding: 0;
+  }
+  .comment-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  .comment-form {
+    margin-top: 20px;
+  }
+  .comment-form input[type="text"],
+  .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .comment-form button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+    </style>
+</head>
+<body>
+    
+
+<h1>关于MT管理器的问题</h1>
+        <p><h2>以后文件大于500MB,<p>用MT管理器，切割文件，
+        <p>这样就可以免登陆下载文件了.
+        <p>.
+        <p>缺点：
+        <p>需要下载MT管理器才能合并文件
+</h2><p>     <img src="https://files.catbox.moe/lyggki.jpg" alt="截图1" class="screenshot">
+        <img src="https://files.catbox.moe/r2tizv.jpg" alt="截图2" class="screenshot">
+<p>.
+
+<p>        <video id="myVideo" width="360" height="640" controls>
+            <source src="https://files.catbox.moe/xhum03.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频标签。
+        </video>
+    
+<p><div class="comment-section">
+  <h3>评论内容</h3>
+  <ul class="comment-list" id="comment-list">
+    <!-- Comments will be added here -->
+  </ul>
+    
+<script src="https://utteranc.es/client.js"
+        repo="Abcd136/x"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+  
+  <script>
+function addComment() {
+  var name = document.getElementById('name').value;
+  var comment = document.getElementById('comment').value;
+  var commentList = document.getElementById('comment-list');
+
+  if (name === "" || comment === "") {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // Create a new list item with the comment
+  var newComment = document.createElement('li');
+  newComment.innerHTML = '<b>' + name + ':</b> ' + comment;
+
+  // Add the new comment to the list
+  commentList.appendChild(newComment);
+
+  // Clear the form
+  document.getElementById('name').value = '';
+  document.getElementById('comment').value = '';
+}
+</script>
+</body>
+</html>
